@@ -7,18 +7,21 @@ Column 0 (Initialization)
 [0, 0] N -> • time               Weight: -0.00000
 [0, 0] N -> • flies              Weight: -0.00000
 [0, 0] N -> • arrow              Weight: -0.00000
-[0, 0] NP -> • N                 Weight: -0.00000
+[0, 0] NP -> • N N               Weight: -0.00000
 [0, 0] NP -> • D N               Weight: -0.00000
-[0, 0] NP -> • NP PP             Weight: -0.00000
+[0, 0] NP -> • N                 Weight: -0.00000
 [0, 0] ROOT -> • S               Weight: -0.00000
 [0, 0] S -> • NP VP              Weight: -0.00000
 
 Column 1 (after scanning 'time')
 -------------------------------------------------------
 [0, 1] N -> time •               Weight: -0.00000
+[0, 1] NP -> N • N               Weight: -0.00000
 [0, 1] NP -> N •                 Weight: -0.00000
-[0, 1] NP -> NP • PP             Weight: -0.00000
 [0, 1] S -> NP • VP              Weight: -0.00000
+[1, 1] N -> • time               Weight: -0.00000
+[1, 1] N -> • flies              Weight: -0.00000
+[1, 1] N -> • arrow              Weight: -0.00000
 [1, 1] V -> • flies              Weight: -0.00000
 [1, 1] V -> • like               Weight: -0.00000
 [1, 1] VP -> • V NP              Weight: -0.00000
@@ -26,6 +29,9 @@ Column 1 (after scanning 'time')
 
 Column 2 (after scanning 'flies')
 -------------------------------------------------------
+[0, 2] NP -> N N •               Weight: -0.00000
+[0, 2] S -> NP • VP              Weight: -0.00000
+[1, 2] N -> flies •              Weight: -0.00000
 [1, 2] V -> flies •              Weight: -0.00000
 [1, 2] VP -> V • NP              Weight: -0.00000
 [1, 2] VP -> V • ADVP            Weight: -0.00000
@@ -35,21 +41,30 @@ Column 2 (after scanning 'flies')
 [2, 2] N -> • time               Weight: -0.00000
 [2, 2] N -> • flies              Weight: -0.00000
 [2, 2] N -> • arrow              Weight: -0.00000
-[2, 2] NP -> • N                 Weight: -0.00000
+[2, 2] NP -> • N N               Weight: -0.00000
 [2, 2] NP -> • D N               Weight: -0.00000
-[2, 2] NP -> • NP PP             Weight: -0.00000
+[2, 2] NP -> • N                 Weight: -0.00000
+[2, 2] V -> • flies              Weight: -0.00000
+[2, 2] V -> • like               Weight: -0.00000
+[2, 2] VP -> • V NP              Weight: -0.00000
+[2, 2] VP -> • V ADVP            Weight: -0.00000
 
 Column 3 (after scanning 'like')
 -------------------------------------------------------
 [2, 3] ADV -> like •             Weight: -0.00000
 [2, 3] ADVP -> ADV • NP          Weight: -0.00000
+[2, 3] V -> like •               Weight: -0.00000
+[2, 3] VP -> V • NP              Weight: -0.00000
+[2, 3] VP -> V • ADVP            Weight: -0.00000
+[3, 3] ADV -> • like             Weight: -0.00000
+[3, 3] ADVP -> • ADV NP          Weight: -0.00000
 [3, 3] D -> • an                 Weight: -0.00000
 [3, 3] N -> • time               Weight: -0.00000
 [3, 3] N -> • flies              Weight: -0.00000
 [3, 3] N -> • arrow              Weight: -0.00000
-[3, 3] NP -> • N                 Weight: -0.00000
+[3, 3] NP -> • N N               Weight: -0.00000
 [3, 3] NP -> • D N               Weight: -0.00000
-[3, 3] NP -> • NP PP             Weight: -0.00000
+[3, 3] NP -> • N                 Weight: -0.00000
 
 Column 4 (after scanning 'an')
 -------------------------------------------------------
@@ -65,8 +80,8 @@ Column 5 (after scanning 'arrow')
 [0, 5] S -> NP VP •              Weight: -0.00000
 [1, 5] VP -> V ADVP •            Weight: -0.00000
 [2, 5] ADVP -> ADV NP •          Weight: -0.00000
+[2, 5] VP -> V NP •              Weight: -0.00000
 [3, 5] NP -> D N •               Weight: -0.00000
-[3, 5] NP -> NP • PP             Weight: -0.00000
 [4, 5] N -> arrow •              Weight: -0.00000
 =========================
 
@@ -74,5 +89,5 @@ Input: time flies like an arrow
 Weight: -0.00000
 Probability: 1.00000e+00
 Parse Tree:
-(ROOT (S (NP (N time)) (VP (V flies) (ADVP (ADV like) (NP (D an) (N arrow))))))
+(ROOT (S (NP (N time) (N flies)) (VP (V like) (NP (D an) (N arrow)))))
 
