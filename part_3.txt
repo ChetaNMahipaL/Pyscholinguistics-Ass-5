@@ -1,0 +1,101 @@
+
+=== FINAL PARSE CHART ===
+
+Column 0 (Initialization)
+-------------------------------------------------------
+[0, 0] D -> • the                Weight: -0.00000
+[0, 0] D -> • a                  Weight: -0.00000
+[0, 0] NP -> • D N               Weight: 1.00000
+[0, 0] NP -> • NP PP             Weight: 1.00000
+[0, 0] ROOT -> • S               Weight: -0.00000
+[0, 0] S -> • NP VP              Weight: -0.00000
+
+Column 1 (after scanning 'the')
+-------------------------------------------------------
+[0, 1] D -> the •                Weight: -0.00000
+[0, 1] NP -> D • N               Weight: 1.00000
+[1, 1] N -> • man                Weight: -0.00000
+[1, 1] N -> • soldier            Weight: -0.00000
+[1, 1] N -> • gun                Weight: -0.00000
+
+Column 2 (after scanning 'man')
+-------------------------------------------------------
+[0, 2] NP -> D N •               Weight: 1.00000
+[0, 2] NP -> NP • PP             Weight: 2.00000
+[0, 2] S -> NP • VP              Weight: 1.00000
+[1, 2] N -> man •                Weight: -0.00000
+[2, 2] P -> • with               Weight: -0.00000
+[2, 2] PP -> • P NP              Weight: -0.00000
+[2, 2] V -> • shot               Weight: -0.00000
+[2, 2] VP -> • V NP              Weight: 1.00000
+[2, 2] VP -> • VP PP             Weight: 1.00000
+
+Column 3 (after scanning 'shot')
+-------------------------------------------------------
+[2, 3] V -> shot •               Weight: -0.00000
+[2, 3] VP -> V • NP              Weight: 1.00000
+[3, 3] D -> • the                Weight: -0.00000
+[3, 3] D -> • a                  Weight: -0.00000
+[3, 3] NP -> • D N               Weight: 1.00000
+[3, 3] NP -> • NP PP             Weight: 1.00000
+
+Column 4 (after scanning 'the')
+-------------------------------------------------------
+[3, 4] D -> the •                Weight: -0.00000
+[3, 4] NP -> D • N               Weight: 1.00000
+[4, 4] N -> • man                Weight: -0.00000
+[4, 4] N -> • soldier            Weight: -0.00000
+[4, 4] N -> • gun                Weight: -0.00000
+
+Column 5 (after scanning 'soldier')
+-------------------------------------------------------
+[0, 5] ROOT -> S •               Weight: 3.00000
+[0, 5] S -> NP VP •              Weight: 3.00000
+[2, 5] VP -> V NP •              Weight: 2.00000
+[2, 5] VP -> VP • PP             Weight: 3.00000
+[3, 5] NP -> D N •               Weight: 1.00000
+[3, 5] NP -> NP • PP             Weight: 2.00000
+[4, 5] N -> soldier •            Weight: -0.00000
+[5, 5] P -> • with               Weight: -0.00000
+[5, 5] PP -> • P NP              Weight: -0.00000
+
+Column 6 (after scanning 'with')
+-------------------------------------------------------
+[5, 6] P -> with •               Weight: -0.00000
+[5, 6] PP -> P • NP              Weight: -0.00000
+[6, 6] D -> • the                Weight: -0.00000
+[6, 6] D -> • a                  Weight: -0.00000
+[6, 6] NP -> • D N               Weight: 1.00000
+[6, 6] NP -> • NP PP             Weight: 1.00000
+
+Column 7 (after scanning 'a')
+-------------------------------------------------------
+[6, 7] D -> a •                  Weight: -0.00000
+[6, 7] NP -> D • N               Weight: 1.00000
+[7, 7] N -> • man                Weight: -0.00000
+[7, 7] N -> • soldier            Weight: -0.00000
+[7, 7] N -> • gun                Weight: -0.00000
+
+Column 8 (after scanning 'gun')
+-------------------------------------------------------
+[0, 8] ROOT -> S •               Weight: 5.00000
+[0, 8] S -> NP VP •              Weight: 5.00000
+[2, 8] VP -> VP PP •             Weight: 4.00000
+[2, 8] VP -> V NP •              Weight: 4.00000
+[2, 8] VP -> VP • PP             Weight: 5.00000
+[3, 8] NP -> NP PP •             Weight: 3.00000
+[3, 8] NP -> NP • PP             Weight: 4.00000
+[5, 8] PP -> P NP •              Weight: 1.00000
+[6, 8] NP -> D N •               Weight: 1.00000
+[6, 8] NP -> NP • PP             Weight: 2.00000
+[7, 8] N -> gun •                Weight: -0.00000
+[8, 8] P -> • with               Weight: -0.00000
+[8, 8] PP -> • P NP              Weight: -0.00000
+=========================
+
+Input: the man shot the soldier with a gun
+Weight: 5.00000
+Probability: 3.12500e-02
+Parse Tree:
+(ROOT (S (NP (D the) (N man)) (VP (VP (V shot) (NP (D the) (N soldier))) (PP (P with) (NP (D a) (N gun))))))
+
